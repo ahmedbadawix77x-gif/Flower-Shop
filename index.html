@@ -11,28 +11,21 @@
 <body>
     <div id="preloader">
         <div class="particles" id="particles"></div>
-        <div class="tree-container">
-            <svg viewBox="0 0 200 200" class="tree-svg">
-                <!-- Trunk and Main Branches -->
-                <path class="tree-part trunk" d="M100 180 Q100 140 100 100" />
-                <path class="tree-part branch" d="M100 140 Q80 120 60 130" />
-                <path class="tree-part branch" d="M100 130 Q120 110 140 125" />
-                <path class="tree-part branch" d="M100 110 Q85 90 70 100" />
-                <path class="tree-part branch" d="M100 100 Q115 80 130 90" />
-                <path class="tree-part branch" d="M100 100 Q100 70 110 50" />
-                
-                <!-- Flower Nodes (Staggered Bloom) -->
-                <g class="flowers">
-                    <circle class="flower-node" cx="60" cy="130" r="6" />
-                    <circle class="flower-node" cx="140" cy="125" r="7" />
-                    <circle class="flower-node" cx="70" cy="100" r="6" />
-                    <circle class="flower-node" cx="130" cy="90" r="8" />
-                    <circle class="flower-node" cx="110" cy="50" r="7" />
-                    <circle class="flower-node" cx="90" cy="80" r="5" />
-                    <circle class="flower-node" cx="115" cy="115" r="6" />
-                </g>
+        <div class="rose-luminous-container">
+            <div class="light-orbs">
+                <div class="orb"></div>
+                <div class="orb"></div>
+                <div class="orb"></div>
+            </div>
+            <svg viewBox="0 0 100 100" class="luminous-rose-svg">
+                <!-- Detailed Petals -->
+                <path class="rose-layer petal-outer" d="M50 85 C40 75 30 65 30 50 C30 35 40 25 50 15 C60 25 70 35 70 50 C70 65 60 75 50 85" />
+                <path class="rose-layer petal-mid" d="M50 75 C45 65 40 55 40 45 C40 35 45 28 50 22 C55 28 60 35 60 45 C60 55 55 65 50 75" />
+                <path class="rose-layer petal-inner" d="M50 65 C48 58 45 52 45 45 C45 38 48 33 50 28 C52 33 55 38 55 45 C55 52 52 58 50 65" />
+                <!-- Center Bud -->
+                <path class="rose-layer bud" d="M50 50 C49 47 48 45 50 42 C52 45 51 47 50 50" />
             </svg>
-            <div class="tree-glow"></div>
+            <div class="rose-breathing-glow"></div>
         </div>
         <div class="reveal-text">
             <h1>Petals & Blooms</h1>
