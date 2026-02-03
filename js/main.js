@@ -29,11 +29,11 @@ if (particlesContainer) {
 
 // Wait for load but add a fail-safe
 window.addEventListener('load', () => {
-    setTimeout(hidePreloader, 4500); // Trigger after 4.5s of loading
+    setTimeout(hidePreloader, 1000); // 1-second cinematic wait
 });
 
-// Fail-safe: Force hide preloader after 8 seconds no matter what
-setTimeout(hidePreloader, 8000);
+// Fail-safe: Force hide preloader after 3 seconds no matter what
+setTimeout(hidePreloader, 3000);
 
 // Petals Animation
 function createPetal() {
