@@ -1,3 +1,36 @@
+// Preloader Logic
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    const particlesContainer = document.getElementById('particles');
+    
+    // Generate falling petals
+    if (particlesContainer) {
+        for (let i = 0; i < 40; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            const size = Math.random() * 6 + 4;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size + 2}px`;
+            particle.style.left = `${Math.random() * 100}%`;
+            particle.style.top = `-${Math.random() * 20}%`;
+            particle.style.animationDelay = `${Math.random() * 10}s`;
+            particle.style.animationDuration = `${Math.random() * 8 + 7}s`;
+            particle.style.transform = `rotate(${Math.random() * 360}deg)`;
+            particlesContainer.appendChild(particle);
+        }
+    }
+    
+    // Extended delay to allow the tree to grow and fully bloom
+    setTimeout(() => {
+        preloader.classList.add('fade-out');
+        
+        // Remove from DOM after transition
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 1500);
+    }, 5500); // 5.5 seconds for full cinematic growth and bloom
+});
+
 // Petals Animation
 function createPetal() {
     const petal = document.createElement('div');
